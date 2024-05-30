@@ -3,7 +3,7 @@
 This repo is for template for my projects.
 
 
-## Installation
+## Installation - Mac
 
 ### Prerequisite: `pyenv`
 
@@ -61,3 +61,45 @@ pip install --upgrade pip
 pip install poetry
 poetry install
 ```
+
+
+## Installation - Windows
+
+The installation on Windows can be done with conda. 
+
+1. The first step is to download a miniconda installer from the following link:
+
+https://docs.conda.io/en/latest/miniconda.html
+
+2. Once it is installed and conda is available in the command prompt, you can create a new environment with the following command:
+
+```bash 
+conda create -n sttr python=3.11.5
+```
+
+3. Activate the environment with the following command:
+
+```bash
+conda activate sttr
+```
+
+
+4. Install the dependencies with the following command:
+
+```bash
+pip install poetry
+poetry install --no-root
+```
+
+
+## Running the Application
+
+To run the application, you need to run the following command:
+
+```bash
+python main.py
+```
+
+which will run GUI for the application. You can upload the image which will automatically 
+trigger the backend and do the processing. The resulting BOM will then be displayed on
+the screen.
