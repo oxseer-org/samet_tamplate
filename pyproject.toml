@@ -1,15 +1,22 @@
-[tool.poetry]
+[project]
 name = "example_template"
 version = "0.1.0"
 description = "This is a template example for python packages"
-authors = ["samet <samettaspinarx@gmail.com>"]
+authors = [
+  { name = "samet", email = "samettaspinarx@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pytest>=8.3.4",
+    "ruff>=0.9.5",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
 
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.3"
-pytest = "^7.4.2"
+[dependency-groups]
+dev = [
+    "numpy>=2.2.2",
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
